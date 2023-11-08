@@ -1,14 +1,63 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-	x:Class="HonXpertCalc.AppShell"
-	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:views="clr-namespace:HonXpertCalc.Views"
-	xmlns:local="clr-namespace:HonXpertCalc">
-	<ShellContent
-		Shell.NavBarIsVisible="False"
-		Title="Home"
-		ContentTemplate="{DataTemplate views:HomePage}"
-		Route="HomePage" />
+    x:Class="HonXpertCalc.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HonXpertCalc"
+    xmlns:views="clr-namespace:HonXpertCalc.Views"
+    BackgroundColor="#040E29"
+    FlyoutBackgroundColor="#3E86ED"
+    Shell.BackgroundColor="#3E86ED">
 
+    <Shell.FlyoutHeader>
+        <Grid RowDefinitions="*,40,40">
+            <StackLayout
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                BackgroundColor="#040E29"
+                Orientation="Vertical"
+                VerticalOptions="CenterAndExpand">
+                <Image
+                    Margin="20"
+                    Aspect="AspectFit"
+                    HeightRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="logo.png"
+                    VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label
+            Padding="0,10"
+            BackgroundColor="#3E86ED"
+            HorizontalTextAlignment="Center"
+            Text="Copyright | Benjamin Fehr" />
+    </Shell.FlyoutFooter>
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomePage}"
+        Route="HomePage"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        Title="Stock removal"
+        ContentTemplate="{DataTemplate views:StockRemovalPage}"
+        Route="StockRemovalPage"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        Title="Profile shift factor new"
+        ContentTemplate="{DataTemplate views:ProfileShiftFactorPage}"
+        Route="ProfileShiftFactorPage"
+        Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        Title="Tooth meshing frequencies"
+        ContentTemplate="{DataTemplate views:ToothMeshingFrequenciesPage}"
+        Route="ToothMeshingFrequenciesPage"
+        Shell.NavBarIsVisible="True" />
 </Shell>

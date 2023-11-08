@@ -3,6 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
 			 x:Class="HonXpertCalc.Views.HomePage"
-			 x:DataType="vm:HomeViewModel">
+			 x:DataType="vm:HomeViewModel"
+             BackgroundColor="#040E29">
 
 </ContentPage>

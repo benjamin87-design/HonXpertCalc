@@ -18,21 +18,17 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddSingleton<HomeViewModel>();
-
-		builder.Services.AddSingleton<HomePage>();
-
-		builder.Services.AddSingleton<StockRemovalViewModel>();
-
-		builder.Services.AddSingleton<StockRemovalPage>();
-
-		builder.Services.AddSingleton<ProfileShiftFactorViewModel>();
-
-		builder.Services.AddSingleton<ProfileShiftFactorPage>();
-
+        builder.Services.AddSingleton<StockRemovalViewModel>();
+        builder.Services.AddSingleton<ProfileShiftFactorViewModel>();
 		builder.Services.AddSingleton<FrequencyToOrderViewModel>();
+		builder.Services.AddSingleton<ToothMeshingFrequenciesViewModel>();
 
-		builder.Services.AddSingleton<FrequencyToOrderPage>();
+        builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddSingleton<StockRemovalPage>();
+        builder.Services.AddSingleton<FrequencyToOrderPage>();
+		builder.Services.AddSingleton<ToothMeshingFrequenciesPage>();
+        builder.Services.AddSingleton<ProfileShiftFactorPage>();
 
-		return builder.Build();
+        return builder.Build();
 	}
 }

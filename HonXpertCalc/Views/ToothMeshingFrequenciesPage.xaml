@@ -1,11 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="HonXpertCalc.Views.StockRemovalPage"
+    x:Class="HonXpertCalc.Views.ToothMeshingFrequenciesPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
-    Title="Stock removal"
-    x:DataType="vm:StockRemovalViewModel"
+    x:DataType="vm:ToothMeshingFrequenciesViewModel"
     BackgroundColor="#040E29">
 
     <StackLayout
@@ -14,92 +13,94 @@
         Orientation="Vertical">
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Mdk raw part"
+                Text="Tooth number workpiece"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding MdkRawPart, Mode=TwoWay}"
+                Text="{Binding NumberOfTeethWP, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Mdk finish part"
+                Text="Tooth number honing ring"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding MdkFinishPart, Mode=TwoWay}"
+                Text="{Binding NumberOfTeethT, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Number of tooth"
+                Text="C1 or C2 rpm"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding NumberOfTeeth, Mode=TwoWay}"
+                Text="{Binding RpmC, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Modul"
+                Text="Oscillation speed"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding Modul, Mode=TwoWay}"
+                Text="{Binding OscillationSpeed, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Pressure angle"
+                Text="Total length of oscillation"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding PressureAngle, Mode=TwoWay}"
+                Text="{Binding OscillationLength, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Helix angle"
+                Text="U length of stay"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding HelixAngle, Mode=TwoWay}"
+                Text="{Binding ULengthOfStay, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
         <StackLayout Margin="5" Orientation="Horizontal">
             <Label
-                Text="Dia measuring ball"
+                Text="Searched frequency"
                 VerticalTextAlignment="Center"
-                WidthRequest="150" />
+                WidthRequest="200" />
             <Entry
                 Keyboard="Numeric"
-                Text="{Binding MeasuringBall, Mode=TwoWay}"
-                WidthRequest="100" />
-        </StackLayout>
-        <StackLayout Margin="5" Orientation="Horizontal">
-            <Label
-                Text="Result"
-                VerticalTextAlignment="Center"
-                WidthRequest="150" />
-            <Label
-                Text="{Binding Result, Mode=TwoWay}"
-                TextColor="Red"
+                Text="{Binding FrequencySearched, Mode=TwoWay}"
                 WidthRequest="100" />
         </StackLayout>
 
+        <StackLayout Margin="20" Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout Orientation="Vertical" Margin="5">
+                <Label Text="Frequency 1"/>
+                <Label Text="{Binding MeshingFrequency1, Mode=TwoWay}" TextColor="Red"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="5">
+                <Label Text="Frequency 2"/>
+                <Label Text="{Binding MeshingFrequency2, Mode=TwoWay}" TextColor="Red"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="5">
+                <Label Text="Frequency 3"/>
+                <Label Text="{Binding MeshingFrequency3, Mode=TwoWay}" TextColor="Red"/>
+            </StackLayout>
+        </StackLayout>
+        
         <Button
             Margin="20"
             Command="{Binding CalculateCommand}"
             Text="Calc"
             WidthRequest="100" />
-
-        <!--  Animation for stock removal to understand  -->
-
     </StackLayout>
 </ContentPage>

@@ -1,8 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
-			 x:Class="HonXpertCalc.Views.ProfileShiftFactorPage"
-			 x:DataType="vm:ProfileShiftFactorViewModel">
+<ContentPage
+    x:Class="HonXpertCalc.Views.ProfileShiftFactorPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
+    x:DataType="vm:ProfileShiftFactorViewModel"
+    BackgroundColor="#040E29">
+    <StackLayout
+        Margin="20"
+        HorizontalOptions="Center"
+        Orientation="Vertical">
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Mdk finish part"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding MdkFinishPart, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Middle Mdk"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding MiddleMdk, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Number of tooth"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding NumberOfTeeth, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Modul"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding Modul, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Pressure angle"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding PressureAngle, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Helix angle"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding HelixAngle, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Dia measuring ball"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding MeasuringBall, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Profil shift factor is"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding ProfileShiftFactorIs, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Result"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Label
+                Text="{Binding Result, Mode=TwoWay}"
+                TextColor="Red"
+                WidthRequest="100" />
+        </StackLayout>
 
+        <Button
+            Margin="20"
+            Command="{Binding CalculateCommand}"
+            Text="Calc"
+            WidthRequest="100" />
+    </StackLayout>
 </ContentPage>
