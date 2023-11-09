@@ -22,12 +22,14 @@ public static class MauiProgram
         builder.Services.AddSingleton<ProfileShiftFactorViewModel>();
 		builder.Services.AddSingleton<FrequencyToOrderViewModel>();
 		builder.Services.AddSingleton<ToothMeshingFrequenciesViewModel>();
+		builder.Services.AddSingleton<HoningTimeViewModel>();
 
         builder.Services.AddSingleton<HomePage>();
         builder.Services.AddSingleton<StockRemovalPage>();
         builder.Services.AddSingleton<FrequencyToOrderPage>();
 		builder.Services.AddSingleton<ToothMeshingFrequenciesPage>();
         builder.Services.AddSingleton<ProfileShiftFactorPage>();
+		builder.Services.AddSingleton<HoningTimePage>();
 
         return builder.Build();
 	}

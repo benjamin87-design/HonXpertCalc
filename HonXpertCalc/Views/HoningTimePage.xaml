@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HonXpertCalc.Views.HoningTimePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
+    x:DataType="vm:HoningTimeViewModel"
+    BackgroundColor="#040E29">
+
+    <ScrollView>
+        <StackLayout
+            Margin="20"
+            HorizontalOptions="Center"
+            Orientation="Vertical">
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Number of tooth part"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding NumberOfToothWP, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Number of tooth honing ring"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding NumberOfToothT, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="C1 or C2 rpm"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding CRpm, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Touch distance 1"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Touching1Distance, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Touch feed 1"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Touching1Feed, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Touch distance 2"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Touching2Distance, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Touch feed 2"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Touching2Feed, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Working distance 1"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Working1Distance, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Working feed 1"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Working1Feed, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Working distance 2"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Working2Distance, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Working feed 2"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding Working2Feed, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Oscillation distance"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding OscillationDistance, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Oscillation sparkout feed"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding OscillationFeedSpartOut, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Sparkout"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding SparkOut, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Pause U"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Entry
+                    Keyboard="Numeric"
+                    Text="{Binding PauseUB, Mode=TwoWay}"
+                    WidthRequest="100" />
+            </StackLayout>
+
+            <StackLayout Margin="5" Orientation="Horizontal">
+                <Label
+                    Text="Total"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="150" />
+                <Label
+                    Text="{Binding Total, Mode=TwoWay}"
+                    TextColor="Red"
+                    WidthRequest="100" />
+            </StackLayout>
+
+            <Button
+                Margin="20"
+                Command="{Binding CalculateCommand}"
+                HorizontalOptions="Center"
+                Text="Calculte"
+                WidthRequest="100" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

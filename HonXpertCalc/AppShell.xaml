@@ -66,4 +66,10 @@
         ContentTemplate="{DataTemplate views:FrequencyToOrderPage}"
         Route="FrequencyToOrderPage"
         Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+    Title="Honing time"
+    ContentTemplate="{DataTemplate views:HoningTimePage}"
+    Route="HoningTimePage"
+    Shell.NavBarIsVisible="True" />
 </Shell>
