@@ -40,4 +40,4 @@ Build and run the project. You should see a console window with a menu of option
 Choose an option from the menu and enter the required inputs. The program will calculate and display the output.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
