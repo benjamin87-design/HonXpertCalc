@@ -18,6 +18,7 @@ public partial class FrequencyToOrderViewModel : BaseViewModel
     }
 
     //Calculate Frequency to Order
+    [RelayCommand]
     private void CalcFreqToOrder()
     {
         //Turn frequency
@@ -30,6 +31,7 @@ public partial class FrequencyToOrderViewModel : BaseViewModel
     }
 
     //Calculate Order to Frequency
+    [RelayCommand]
     private async Task CalcOrderToFreq()
     {
 

@@ -62,6 +62,10 @@
 	  </None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Resources\Strings\" />
+	</ItemGroup>
+
 	<PropertyGroup Label="MauiAppAccelerator">
 		<wizardVersion>v1.3.2</wizardVersion>
 		<projectType>MVVMToolkit</projectType>

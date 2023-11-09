@@ -1,8 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
-			 x:Class="HonXpertCalc.Views.FrequencyToOrderPage"
-			 x:DataType="vm:FrequencyToOrderViewModel">
+<ContentPage
+    x:Class="HonXpertCalc.Views.FrequencyToOrderPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:HonXpertCalc.ViewModels"
+    x:DataType="vm:FrequencyToOrderViewModel"
+    BackgroundColor="#040E29">
+    <StackLayout
+        Margin="20"
+        HorizontalOptions="Center"
+        Orientation="Vertical">
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="C1 or C2 rpm"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding Rpm, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Frequency"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding Frequency, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Margin="5" Orientation="Horizontal">
+            <Label
+                Text="Order"
+                VerticalTextAlignment="Center"
+                WidthRequest="150" />
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding Order, Mode=TwoWay}"
+                WidthRequest="100" />
+        </StackLayout>
 
+        <StackLayout
+            Margin="20"
+            HorizontalOptions="Center"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Command="{Binding CalcFreqToOrderCommand}"
+                Text="Get Order"
+                WidthRequest="150" />
+            <Button
+                Margin="5"
+                Command="{Binding CalcOrderToFreqCommand}"
+                Text="Get Frequency"
+                WidthRequest="150" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

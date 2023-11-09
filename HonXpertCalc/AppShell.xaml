@@ -60,4 +60,10 @@
         ContentTemplate="{DataTemplate views:ToothMeshingFrequenciesPage}"
         Route="ToothMeshingFrequenciesPage"
         Shell.NavBarIsVisible="True" />
+
+    <ShellContent
+        Title="Frequency Order Converter"
+        ContentTemplate="{DataTemplate views:FrequencyToOrderPage}"
+        Route="FrequencyToOrderPage"
+        Shell.NavBarIsVisible="True" />
 </Shell>
